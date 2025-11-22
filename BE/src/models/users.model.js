@@ -1,4 +1,4 @@
-const pool =require('../config/db')
+const pool = require('../config/db')
 
 
 const User = {
@@ -18,9 +18,10 @@ const User = {
     },
     async createUser(userName, email, password){
         const [row] = await pool.query(
-            'INSERT INTO user (userName, email, password) VALUES (?,?,?)',
+            'INSERT INTO users (userName, email, password) VALUES (?,?,?)',
             [userName, email, password] 
-        )
+        );
+        return row.insertId
     }
 }   
 module.exports = User;
