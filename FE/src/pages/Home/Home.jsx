@@ -5,7 +5,7 @@ const Home = () => {
   const token = localStorage.getItem("token");
 
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ backgroundColor: "#c9c6c6ff", height: "100%" }}>
       <h1>Home Page</h1>
     </div>
   );

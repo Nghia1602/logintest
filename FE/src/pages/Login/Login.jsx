@@ -12,11 +12,13 @@ const Login = () => {
       notification.error({
         message: "Vui lòng nhập đầy đủ thông tin đăng nhập",
       });
+      return;
     }
     try {
       const respone = await Authlogin(username, password);
       notification.success({ message: respone.data.message });
       localStorage.setItem("token", respone.data.token);
+      console.log("token", respone.data.token);
       // window.location.href = "/";
       navigate("/home", { replace: true });
     } catch (error) {
