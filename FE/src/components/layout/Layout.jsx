@@ -12,19 +12,21 @@ const LayoutComponent = () => (
       width: "100vw",
       height: "100vh",
       display: "flex",
-      flexDirection: "column",
+    
       borderRadius: 8,
       overflow: "hidden",
+      fontFamily:"Public Sans, sans-serif"
     }}
   >
-    <Header
-      style={{ height: "10%", width: "100%", backgroundColor: "#4096ff" }}
+    <SiderLayout/>
+    
+    <Layout style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+      <Header
+      style={{ height: "75px", width: "100%", backgroundColor: "#ffffffff", padding:0, boxShadow: "0 2px 8px 0 #f0f1f2" }}
     >
-      Header
+      <HeaderLayout/>
     </Header>
-    <Layout style={{ flex: 1, display: "flex", flexDirection: "row" }}>
-      <Sider width="15%" style={{ backgroundColor: "#ffffffff" }}></Sider>
-      <Content style={{ backgroundColor: "#f4f4f4ff", flex: 1, justifyContent: "center",  display: "flex" }}>
+      <Content style={{ backgroundColor: "#f4f4f4ff", flex: 1, justifyContent: "center",  display: "flex",padding: '10px' }}>
         <ContentLayout/>
       </Content>
     </Layout>

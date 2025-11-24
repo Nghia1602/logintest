@@ -26,12 +26,12 @@ const Login = () => {
       notification.error({ message: "Đăng nhập thất bại" });
     }
   };
-  return (
+  return ( <div className="w-[100vw] h-[100vh] flex justify-center items-center ">
     <div className="w-[700px] h-[400px] flex justify-center items-center rounded-[25px] overflow-hidden shadow">
       <div className="w-[700px] h-[400px]  flex flex-col justify-center items-center bg-[white] flex-1">
         <div className="flex flex-col flex-2 justify-center items-center gap-2">
           <span className="text-[30px]">Đăng nhập</span>
-          <span>Sử dụng tên đăng nhâp hoặc email để đăng nhập</span>
+          <span className="w-[300px] text-center">Sử dụng tên đăng nhâp hoặc email để đăng nhập</span>
         </div>
         <div className="flex flex-col gap-5 flex-3  items-center ">
           <Input
@@ -63,6 +63,7 @@ const Login = () => {
       >
         <span className="text-white">Trang đăng nhập</span>
       </div>
+    </div>
     </div>
   );
 };
