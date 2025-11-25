@@ -21,10 +21,10 @@ const SiderLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
   const items = [
     getItem(<Link to="/home">Trang chủ</Link>, "1", <House />),
-    getItem(<Link to="/list-student">Danh sách lớp</Link>, "2", <Contact />),
-    getItem("Môn học", "3", <BookOpen />),
-    getItem("Giáo viên", "4", <SquareUser />),
-    getItem("Chat", "9", <MessageCircleMore />),
+    getItem(<Link to="/list-students">Danh sách lớp</Link>, "2", <Contact />),
+    getItem(<Link to="/list-subjects">Danh sách môn học</Link>, "3", <BookOpen />),
+    getItem(<Link to="/list-teachers">Giảng viên</Link>, "4", <SquareUser />),
+    getItem(<Link to="/chat">Chat</Link>, "9", <MessageCircleMore />),
   ];
   return (
     <Sider

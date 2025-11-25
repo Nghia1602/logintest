@@ -17,7 +17,9 @@ const AppRouter = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/" element={<PrivateRoute page={<LayoutComponent />} />}>
         <Route path="home" element={<Home />} />
-        <Route path="home" element={<Outlet />} />
+        <Route path="list-students" element={<Outlet />} />
+        <Route path="list-subjects" element={<Outlet />} />
+        <Route path="list-teachers" element={<Outlet />} />
         {/* <Route path="profile" element={<PrivateRoute page={<Profile />} />} /> */}
       </Route>
     </Routes>
